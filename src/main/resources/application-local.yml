@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    url: jdbc:postgresql://${OBP_LOCAL_DB_HOST:localhost}:5432/${OBP_LOCAL_DB_NAME:obp_customer_local}
+    username: ${OBP_LOCAL_DB_USER:obp_local_user}
+    password: ${OBP_LOCAL_DB_PASS:obp_local_pass}
+    driver-class-name: org.postgresql.Driver

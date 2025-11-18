@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    url: jdbc:postgresql://${OBP_DEV_DB_HOST:dev-postgres}:${OBP_DEV_DB_PORT:5432}/${OBP_DEV_DB_NAME:obp_customer_dev}
+    username: ${OBP_DEV_DB_USER:obp_dev_user}
+    password: ${OBP_DEV_DB_PASS:obp_dev_pass}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: false

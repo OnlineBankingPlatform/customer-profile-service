@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: obp_customer_local
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: obp_local_user
+      POSTGRES_PASSWORD: obp_local_pass
+      POSTGRES_DB: obp_customer_local
+    ports:
+      - "5432:5432"
+    volumes:
+      - obp_local_data:/var/lib/postgresql/data
+
+volumes:
+  obp_local_data:
+

@@ -10,7 +10,7 @@ import java.util.Base64;
 @Converter
 public class AesEncryptionConverter implements AttributeConverter<String, String> {
 
-    // 32-byte key for AES-256 (change later, load from env)
+    // 32-byte key for AES-256 (change later, load from env)...
     private static final String SECRET = "12345678901234567890123456789012";
 
     @Override
